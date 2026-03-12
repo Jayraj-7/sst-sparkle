@@ -146,11 +146,25 @@ export default function Dashboard() {
         {/* Quick Actions */}
         <motion.div variants={item} className="grid grid-cols-2 gap-3">
           <button
+            onClick={() => navigate('/daily-challenge')}
+            className="glass-hover rounded-2xl p-4 flex items-center gap-3"
+          >
+            <Zap className="w-5 h-5 text-accent" />
+            <span className="text-sm font-medium">Daily Challenge</span>
+          </button>
+          <button
+            onClick={() => navigate('/explore')}
+            className="glass-hover rounded-2xl p-4 flex items-center gap-3"
+          >
+            <Map className="w-5 h-5 text-primary" />
+            <span className="text-sm font-medium">Explore Maps</span>
+          </button>
+          <button
             onClick={() => navigate('/quiz')}
             className="glass-hover rounded-2xl p-4 flex items-center gap-3"
           >
             <BookOpen className="w-5 h-5 text-primary" />
-            <span className="text-sm font-medium">Daily Quiz</span>
+            <span className="text-sm font-medium">Practice Quiz</span>
           </button>
           <button
             onClick={() => navigate('/achievements')}

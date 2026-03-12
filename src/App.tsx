@@ -9,6 +9,8 @@ import LessonPlayer from "./pages/LessonPlayer";
 import QuizPage from "./pages/QuizPage";
 import ProgressPage from "./pages/ProgressPage";
 import AchievementsPage from "./pages/AchievementsPage";
+import DailyChallengePage from "./pages/DailyChallengePage";
+import ExploreMapPage from "./pages/ExploreMapPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/quiz" element={<QuizPage />} />
           <Route path="/progress" element={<ProgressPage />} />
           <Route path="/achievements" element={<AchievementsPage />} />
+          <Route path="/daily-challenge" element={<DailyChallengePage />} />
+          <Route path="/explore" element={<ExploreMapPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <BottomNav />
