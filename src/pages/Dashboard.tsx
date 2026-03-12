@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { subjects } from '@/data/subjects';
 import { ProgressRing } from '@/components/ProgressRing';
 import { useProgress } from '@/hooks/useProgress';
-import { Flame, Star, TrendingUp, BookOpen, ChevronRight } from 'lucide-react';
+import { Flame, Star, TrendingUp, BookOpen, ChevronRight, Zap, Map } from 'lucide-react';
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
 const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };
