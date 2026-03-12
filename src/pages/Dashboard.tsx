@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { subjects } from '@/data/subjects';
 import { ProgressRing } from '@/components/ProgressRing';
 import { useProgress } from '@/hooks/useProgress';
-import { Flame, Star, TrendingUp, BookOpen, ChevronRight } from 'lucide-react';
+import { Flame, Star, TrendingUp, BookOpen, ChevronRight, Zap, Map } from 'lucide-react';
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
 const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };
@@ -146,11 +146,25 @@ export default function Dashboard() {
         {/* Quick Actions */}
         <motion.div variants={item} className="grid grid-cols-2 gap-3">
           <button
+            onClick={() => navigate('/daily-challenge')}
+            className="glass-hover rounded-2xl p-4 flex items-center gap-3"
+          >
+            <Zap className="w-5 h-5 text-accent" />
+            <span className="text-sm font-medium">Daily Challenge</span>
+          </button>
+          <button
+            onClick={() => navigate('/explore')}
+            className="glass-hover rounded-2xl p-4 flex items-center gap-3"
+          >
+            <Map className="w-5 h-5 text-primary" />
+            <span className="text-sm font-medium">Explore Maps</span>
+          </button>
+          <button
             onClick={() => navigate('/quiz')}
             className="glass-hover rounded-2xl p-4 flex items-center gap-3"
           >
             <BookOpen className="w-5 h-5 text-primary" />
-            <span className="text-sm font-medium">Daily Quiz</span>
+            <span className="text-sm font-medium">Practice Quiz</span>
           </button>
           <button
             onClick={() => navigate('/achievements')}
